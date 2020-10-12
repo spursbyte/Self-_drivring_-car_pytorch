@@ -1,6 +1,3 @@
-# AI for Self Driving Car
-
-# Importing the libraries
 
 import numpy as np
 import random
@@ -12,7 +9,7 @@ import torch.optim as optim
 import torch.autograd as autograd
 from torch.autograd import Variable
 
-# Creating the architecture of the Neural Network
+
 
 class Network(nn.Module):
     
@@ -28,7 +25,6 @@ class Network(nn.Module):
         q_values = self.fc2(x)
         return q_values
 
-# Implementing Experience Replay
 
 class ReplayMemory(object):
     
@@ -45,7 +41,7 @@ class ReplayMemory(object):
         samples = zip(*random.sample(self.memory, batch_size))
         return map(lambda x: Variable(torch.cat(x, 0)), samples)
 
-# Implementing Deep Q Learning
+
 
 class Dqn():
     
