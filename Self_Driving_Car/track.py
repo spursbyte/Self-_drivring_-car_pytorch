@@ -91,7 +91,7 @@ class Ball2(Widget):
 class Ball3(Widget):
     pass
 
-# Creating the game class
+
 
 class Game(Widget):
 
@@ -160,7 +160,7 @@ class Game(Widget):
             goal_y = self.height-goal_y
         last_distance = distance
 
-# Adding the painting tools
+
 
 class MyPaintWidget(Widget):
 
@@ -190,7 +190,6 @@ class MyPaintWidget(Widget):
             last_x = x
             last_y = y
 
-# Adding the API Buttons (clear, save and load)
 
 class CarApp(App):
 
@@ -226,6 +225,6 @@ class CarApp(App):
         print("loading last saved brain...")
         brain.load()
 
-# Running the whole thing
+
 if __name__ == '__main__':
     CarApp().run()
